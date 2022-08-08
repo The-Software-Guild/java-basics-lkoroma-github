@@ -11,6 +11,10 @@ public class RockPaparScissors {
         while (again) {
             System.out.println("How many rounds do you want to play? (MAX 10)");
             int rounds = Integer.parseInt(scan.nextLine());
+            if (rounds < 1 || rounds > 10){
+                System.out.println("Error incorrect number of rounds entered");
+                System.exit(0);
+            }
             int userWins = 0;
             int compWins = 0;
             int ties = 0;
